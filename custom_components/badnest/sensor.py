@@ -1,14 +1,13 @@
 import logging
 
 from homeassistant.helpers.entity import Entity
-
-from .const import DOMAIN
-
+from homeassistant.components.sensor import SensorDeviceClass
 from homeassistant.const import (
     ATTR_BATTERY_LEVEL,
-    SensorDeviceClass,
     UnitOfTemperature,
 )
+
+from .const import DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
 

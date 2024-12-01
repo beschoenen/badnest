@@ -1,12 +1,12 @@
 """This component provides basic support for Foscam IP cameras."""
 import logging
-from datetime import timedelta
 
+from datetime import timedelta
+from homeassistant.util.dt import utcnow
 from homeassistant.components.camera import (
     Camera,
     CameraEntityFeature,
 )
-from homeassistant.util.dt import utcnow
 
 from .const import DOMAIN
 

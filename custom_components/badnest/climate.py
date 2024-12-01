@@ -1,11 +1,10 @@
 """Demo platform that offers a fake climate device."""
-from datetime import datetime
 import logging
 
-try:
-    from homeassistant.components.climate import ClimateEntity
-except ImportError:
-    from homeassistant.components.climate import ClimateDevice as ClimateEntity
+from datetime import datetime
+from homeassistant.components.climate import ClimateEntity
+from homeassistant.components.sensor import SensorDeviceClass
+from homeassistant.const import UnitOfTemperature
 from homeassistant.components.climate.const import (
     ATTR_TARGET_TEMP_HIGH,
     ATTR_TARGET_TEMP_LOW,
@@ -13,9 +12,7 @@ from homeassistant.components.climate.const import (
     FAN_ON,
     PRESET_ECO,
     PRESET_NONE,
-    UnitOfTemperature,
     HVACMode,
-    SensorDeviceClass,
     ClimateEntityFeature,
 )
 
