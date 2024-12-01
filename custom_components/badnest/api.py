@@ -1,9 +1,6 @@
 import logging
-import sys
 import requests
 import simplejson
-
-from time import sleep
 
 API_URL = "https://home.nest.com"
 TOKEN_URL = 'https://oauth2.googleapis.com/token'

@@ -4,7 +4,7 @@ from datetime import timedelta
 
 from homeassistant.components.camera import (
     Camera,
-    SUPPORT_ON_OFF,
+    CameraEntityFeature,
 )
 from homeassistant.util.dt import utcnow
 
@@ -78,7 +78,7 @@ class NestCamera(Camera):
     @property
     def supported_features(self):
         """Return supported features."""
-        return SUPPORT_ON_OFF
+        return CameraEntityFeature.ON_OFF
 
     def update(self):
         """Cache value from Python-nest."""
